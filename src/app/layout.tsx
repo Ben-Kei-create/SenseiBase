@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -22,7 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJp.variable} antialiased`}>{children}</body>
+      <body className={`${notoSansJp.variable} antialiased`}>
+        <div className="min-h-screen bg-white text-[#0a0a0a]">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

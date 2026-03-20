@@ -53,22 +53,7 @@ export default function Home() {
   const premiumTakeHome = Math.floor(gross * 0.85);
 
   return (
-    <div className="min-h-screen bg-white text-[#0a0a0a]">
-      <header className="border-b border-[#e5e5e5]">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
-          <Link href="/" className="text-2xl font-black tracking-tight">
-            <span className="border-b-[3px] border-[#0a0a0a] pb-0.5">Sensei</span>
-            Base
-          </Link>
-          <Link
-            href="/signup"
-            className="rounded-full border border-[#0a0a0a] px-4 py-2 text-sm font-semibold transition-colors hover:bg-[#0a0a0a] hover:text-white"
-          >
-            先生登録
-          </Link>
-        </div>
-      </header>
-
+    <>
       <main>
         <section className="mx-auto w-full max-w-6xl px-6 pb-16 pt-16 sm:px-10 sm:pb-24 sm:pt-24">
           <p className="text-xs font-bold tracking-[0.24em] text-[#666666] uppercase">
@@ -82,12 +67,18 @@ export default function Home() {
           <p className="mt-6 max-w-3xl text-base leading-8 text-[#666666] sm:text-lg">
             SenseiBaseは、塾講師・学校教員・家庭教師のための教材マーケットです。ワークシート、授業計画、指導ノウハウを出品し、全国の学び手へ届けられます。
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/signup"
               className="inline-flex items-center rounded-full bg-[#0a0a0a] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#2a2a2a] sm:text-base"
             >
               無料で先生アカウントを作成
+            </Link>
+            <Link
+              href="/materials"
+              className="inline-flex items-center rounded-full border border-[#0a0a0a] px-7 py-3 text-sm font-bold text-[#0a0a0a] transition-colors hover:bg-[#0a0a0a] hover:text-white sm:text-base"
+            >
+              教材を探す
             </Link>
           </div>
         </section>
@@ -180,6 +171,6 @@ export default function Home() {
           <p>先生の教材知見を、次の学びへ。</p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
